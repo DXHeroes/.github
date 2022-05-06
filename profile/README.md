@@ -1,6 +1,6 @@
 # [DX Heroes](https://dxheroes.io?utm_source=github&utm_medium=profile_readme&utm_campaign=headline)
 
-![DX Heroes](cover.png)
+![DX Heroes](https://github.com/DXHeroes/.github/blob/main/profile/cover.png?raw=true)
 
 ## DX Is The New UX
 
