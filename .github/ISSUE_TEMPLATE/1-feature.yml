@@ -1,4 +1,4 @@
-name: "Feature request"
+name: "Feature request [structured]"
 description: "Propose and specify a new feature, including acceptance criteria and Definition of Done."
 title: "<title>"
 type: feature
@@ -61,25 +61,6 @@ body:
       placeholder: |
         - CSV export (tracked separately)
         - Historical metrics before 2022
-
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority *
-      options:
-        - P0 - Critical
-        - P1 - High
-        - P2 - Medium
-        - P3 - Low
-      default: 2
-    validations:
-      required: true
-
-  - type: input
-    id: target_milestone
-    attributes:
-      label: Target release/milestone
-      placeholder: e.g., "v2.7" or "Sprint 2025-11-15"
 
   - type: textarea
     id: solution_approach
@@ -178,12 +159,6 @@ body:
     attributes:
       label: Links & related issues
       placeholder: "#123, #456; Design doc; ADR-007; Confluence/Wiki"
-
-  - type: input
-    id: estimate
-    attributes:
-      label: Effort estimate
-      placeholder: e.g., "5 story points" or "3 days"
 
   - type: textarea
     id: notes
