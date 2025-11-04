@@ -1,0 +1,192 @@
+name: "Feature request"
+description: "Propose and specify a new feature, including acceptance criteria and Definition of Done."
+title: ""
+type: feature
+labels: []
+# Optional: link to your org/project (replace with your real IDs)
+# projects:
+#   - "orgs/<org-slug>/projects/<project-number>"
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the proposal! Please fill out the sections below. Fields marked * are required.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Brief summary *
+      description: One-sentence description of the value/purpose of this feature.
+      placeholder: e.g., "Users can filter reports by team and sprint."
+    validations:
+      required: true
+
+  - type: textarea
+    id: user_story
+    attributes:
+      label: User story *
+      description: Use the format "As a <role>, I want <goal>, so that <benefit>."
+      placeholder: |
+        As a team lead, I want to filter reports by sprint so I can quickly review performance for a given period.
+    validations:
+      required: false
+
+  - type: textarea
+    id: problem_context
+    attributes:
+      label: Context / Problem *
+      description: Why are we doing this? Current state, pain, and impact.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: In scope *
+      description: What is included? List the main functional points (bullets).
+      placeholder: |
+        - Filter by sprint
+        - Filter by team
+        - Persist last selected filters
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      description: What is explicitly NOT part of this issue.
+      placeholder: |
+        - CSV export (tracked separately)
+        - Historical metrics before 2022
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority *
+      options:
+        - P0 - Critical
+        - P1 - High
+        - P2 - Medium
+        - P3 - Low
+      default: 2
+    validations:
+      required: true
+
+  - type: input
+    id: target_milestone
+    attributes:
+      label: Target release/milestone
+      placeholder: e.g., "v2.7" or "Sprint 2025-11-15"
+
+  - type: textarea
+    id: solution_approach
+    attributes:
+      label: Proposed approach / Implementation notes
+      description: API design, data model, UX flow, components, feature flags, etc.
+      placeholder: |
+        - UI: add a sprint dropdown to the Reports page header
+        - Backend: endpoint GET /reports?sprintId=...
+        - Feature flag: reports_filtering_v1
+
+  - type: textarea
+    id: ux_ui_assets
+    attributes:
+      label: UX/UI links
+      description: Links to Figma, prototypes, screenshots.
+      placeholder: https://www.figma.com/file/...
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: What does this depend on (other issues, services, teams)?
+      placeholder: |
+        - Blocked by #123 (add sprint entities to API)
+        - Requires new IAM permission
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks & constraints
+      placeholder: |
+        - DB performance risk on large datasets
+        - Potential UX clutter in the toolbar
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria *
+      description: Use Given/When/Then scenarios or bullets. Each criterion must be testable/measurable.
+      placeholder: |
+        **Example (Gherkin):**
+        Given I am on the Reports page
+        And sprints with data exist
+        When I select sprint "2025-11 (Sprint 42)"
+        Then I see only reports within that sprint
+        And my selection is saved and prefilled on return
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: definition_of_done
+    attributes:
+      label: Definition of Done *
+      description: Check what must be completed to close this issue.
+      options:
+        #- label: Implemented and covered by unit tests (≥80% for new logic)
+        #- label: Integration/E2E tests for key flows
+        - label: UX/UI review approved
+        - label: Code review approved (≥1 approver)
+        #- label: Feature flag created and default OFF (if applicable)
+        #- label: Telemetry/monitoring and logging added
+        - label: Documentation updated (README / ADR / API)
+        - label: Release notes prepared
+        - label: Successfully tested in Staging
+        - label: Rollout plan defined (and rollback plan if needed)
+    validations:
+      required: true
+
+  - type: textarea
+    id: test_plan
+    attributes:
+      label: Test plan
+      description: How will we verify it? Scenarios, data, environments.
+
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Success metrics / Impact
+      description: How will we know it delivered value?
+      placeholder: |
+        - +20% adoption
+        - -30% time to find a report
+        - Error rate in logs < 1% of requests
+
+  - type: textarea
+    id: rollout
+    attributes:
+      label: Rollout / Release plan
+      placeholder: |
+        - Gradual enablement via feature flag (10% → 50% → 100%)
+        - Comms in changelog and internal wiki
+
+  - type: textarea
+    id: links
+    attributes:
+      label: Links & related issues
+      placeholder: "#123, #456; Design doc; ADR-007; Confluence/Wiki"
+
+  - type: input
+    id: estimate
+    attributes:
+      label: Effort estimate
+      placeholder: e.g., "5 story points" or "3 days"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      placeholder: Anything else the team should know.
