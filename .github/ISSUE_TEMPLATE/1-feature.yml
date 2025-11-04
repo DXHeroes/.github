@@ -1,6 +1,6 @@
 name: "Feature request"
 description: "Propose and specify a new feature, including acceptance criteria and Definition of Done."
-title: ""
+title: "<title>"
 type: feature
 labels: []
 # Optional: link to your org/project (replace with your real IDs)
