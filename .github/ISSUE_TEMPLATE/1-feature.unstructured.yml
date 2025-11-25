@@ -1,74 +1,78 @@
----
-name: Feature request [Unsctructured]
-about: Unsctructured feate template
+name: "Feature request [Unstructured]"
+description: "Free-form feature request template"
 title: "<title>"
----
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Request
+        Use the template below as a guide. Fill in the sections that are relevant to your request.
+        Fields marked with * are recommended but not enforced.
 
-### Brief summary *
-<!-- text -->
+  - type: textarea
+    id: content
+    attributes:
+      label: Feature Description
+      description: |
+        Describe your feature request using the suggested structure below.
+        Feel free to modify or skip sections that aren't relevant.
+      placeholder: |
+        ### Brief summary *
+        [Describe the feature in 1-2 sentences]
 
+        ### User story *
+        As a [role], I want [feature] so that [benefit]
 
-### User story *
-<!-- text -->
+        ### Context / Problem *
+        [What problem does this solve?]
 
+        ### In scope *
+        - [What's included]
+        - 
 
-### Context / Problem *
-<!-- text -->
+        ### Out of scope
+        - [What's explicitly NOT included]
+        - 
 
+        ### Proposed approach / Implementation notes
+        - [Technical suggestions if any]
+        - 
 
-### In scope *
-<!-- text in list -->
-- 
+        ### UX/UI links
+        - [Figma/design links if available]
 
-### Out of scope
-<!-- text in list -->
-- 
+        ### Dependencies
+        - [Other features/systems this depends on]
 
-### Proposed approach / Implementation notes
+        ### Risks & constraints
+        - [Potential issues to consider]
 
-<!-- text in list -->
-- 
+        ### Acceptance criteria *
+        - [ ] Criteria 1
+        - [ ] Criteria 2
 
-### UX/UI links
-<!-- text -->
-- 
+        ### Definition of Done *
+        - [ ] UX/UI review approved
+        - [ ] Code review approved (≥1 approver)
+        - [ ] Documentation updated (README / ADR / API)
+        - [ ] Release notes prepared
+        - [ ] Successfully tested in Staging
+        - [ ] Rollout plan defined (and rollback plan if needed)
 
-### Dependencies
-<!-- text -->
-- 
+        ### Test plan
+        - [How to test this feature]
 
-### Risks & constraints
-<!-- text -->
-- 
+        ### Success metrics / Impact
+        - [How will we measure success?]
 
-### Acceptance criteria *
-<!-- text -->
-- 
+        ### Rollout / Release plan
+        - [Deployment strategy]
 
-### Definition of Done *
+        ### Links & related issues
+        - [Related issues/PRs]
 
-- [ ] UX/UI review approved
-- [ ] Code review approved (≥1 approver)
-- [ ] Documentation updated (README / ADR / API)
-- [ ] Release notes prepared
-- [ ] Successfully tested in Staging
-- [ ] Rollout plan defined (and rollback plan if needed)
-
-### Test plan
-<!-- text -->
-- 
-
-### Success metrics / Impact
-<!-- text -->
-- 
-
-### Rollout / Release plan
-<!-- text -->
-- 
-
-### Links & related issues
-<!-- text -->
-- 
-
-### Additional notes
-<!-- text -->
+        ### Additional notes
+        [Anything else]
+    validations:
+      required: true
