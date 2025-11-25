@@ -1,0 +1,145 @@
+name: "Epic / Initiative"
+description: "Large cross-functional initiative or project spanning multiple tasks"
+title: "[Epic] "
+labels: ["epic", "initiative"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎯 Epic / Initiative
+        Use this template for large initiatives that span multiple tasks, teams, or sprints.
+
+  - type: input
+    id: owner
+    attributes:
+      label: Epic Owner
+      description: Who is responsible for this epic?
+      placeholder: "@username"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      description: Current status of this epic
+      options:
+        - "📋 Planning"
+        - "🚀 In Progress"
+        - "⏸️ On Hold"
+        - "✅ Completed"
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Executive Summary
+      description: High-level overview of this initiative (2-3 sentences)
+      placeholder: |
+        What is this epic about? What's the end goal?
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem are we solving? Why does this matter?
+      placeholder: |
+        - Current situation
+        - Pain points
+        - Business impact
+    validations:
+      required: true
+
+  - type: textarea
+    id: goals
+    attributes:
+      label: Goals & Success Metrics
+      description: What does success look like? How will we measure it?
+      placeholder: |
+        **Goals:**
+        - Goal 1
+        - Goal 2
+
+        **Success Metrics (KPIs):**
+        - Metric 1: Target value
+        - Metric 2: Target value
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What's in scope and out of scope?
+      placeholder: |
+        **In Scope:**
+        - Item 1
+        - Item 2
+
+        **Out of Scope:**
+        - Item 1
+        - Item 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: teams
+    attributes:
+      label: Teams Involved
+      description: Which teams need to contribute?
+      placeholder: |
+        - [ ] Engineering - @lead
+        - [ ] Marketing - @lead
+        - [ ] Sales - @lead
+        - [ ] Product - @lead
+    validations:
+      required: true
+
+  - type: textarea
+    id: milestones
+    attributes:
+      label: Milestones & Timeline
+      description: Key milestones and target dates
+      placeholder: |
+        | Milestone | Target Date | Status |
+        |-----------|-------------|--------|
+        | Milestone 1 | YYYY-MM-DD | 🔲 |
+        | Milestone 2 | YYYY-MM-DD | 🔲 |
+        | Launch | YYYY-MM-DD | 🔲 |
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks & Dependencies
+      description: What could go wrong? What are we dependent on?
+      placeholder: |
+        **Risks:**
+        - Risk 1 - Mitigation plan
+        - Risk 2 - Mitigation plan
+
+        **Dependencies:**
+        - Dependency 1
+        - Dependency 2
+    validations:
+      required: false
+
+  - type: textarea
+    id: related
+    attributes:
+      label: Related Issues & Links
+      description: Link to child issues, documents, or resources
+      placeholder: |
+        **Child Issues:**
+        - [ ] #123 - Task 1
+        - [ ] #124 - Task 2
+
+        **Documents:**
+        - [PRD/Spec link]
+        - [Design link]
+    validations:
+      required: false
