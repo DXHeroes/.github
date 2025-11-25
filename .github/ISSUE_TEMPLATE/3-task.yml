@@ -1,0 +1,91 @@
+name: "Task"
+description: "General task for any team (Engineering, Marketing, Sales, Operations)"
+title: "[Task] "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📋 Task
+        Use this template for general tasks across any team.
+
+  - type: dropdown
+    id: team
+    attributes:
+      label: Team
+      description: Which team owns this task?
+      options:
+        - Engineering
+        - Marketing
+        - Sales
+        - Operations
+        - Product
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent is this task?
+      options:
+        - "🔴 High - Urgent"
+        - "🟡 Medium - Normal"
+        - "🟢 Low - When possible"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What needs to be done?
+      placeholder: |
+        Describe the task clearly and concisely.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context / Background
+      description: Why is this task needed? What's the business context?
+      placeholder: |
+        - Why is this important?
+        - What problem does it solve?
+        - Any relevant background information?
+    validations:
+      required: false
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables
+      description: What are the expected outputs?
+      placeholder: |
+        - [ ] Deliverable 1
+        - [ ] Deliverable 2
+        - [ ] Deliverable 3
+    validations:
+      required: true
+
+  - type: input
+    id: deadline
+    attributes:
+      label: Deadline
+      description: When should this be completed? (optional)
+      placeholder: "e.g., 2025-12-01 or Q4 2025"
+    validations:
+      required: false
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: Resources & Links
+      description: Any relevant documents, links, or references?
+      placeholder: |
+        - [Link to document]
+        - [Related issue #123]
+    validations:
+      required: false

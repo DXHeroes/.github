@@ -1,0 +1,116 @@
+name: "Improvement / Tech Debt"
+description: "Technical improvement, refactoring, or tech debt reduction"
+title: "[Improvement] "
+labels: ["improvement", "tech-debt"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🔧 Improvement / Tech Debt
+        Use this template for technical improvements, refactoring, performance optimization, or tech debt reduction.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Improvement Type
+      description: What kind of improvement is this?
+      options:
+        - "🔄 Refactoring - Code restructuring"
+        - "⚡ Performance - Speed/efficiency optimization"
+        - "🛡️ Security - Security hardening"
+        - "📦 Dependencies - Update/upgrade dependencies"
+        - "🧹 Cleanup - Remove dead code/unused features"
+        - "📚 Documentation - Improve docs/comments"
+        - "🧪 Testing - Improve test coverage"
+        - "🏗️ Infrastructure - DevOps/CI/CD improvements"
+        - "♿ Accessibility - A11y improvements"
+        - "🔧 Other"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this improvement?
+      options:
+        - "🔴 Critical - Blocking or high risk"
+        - "🟡 Medium - Should be done soon"
+        - "🟢 Low - Nice to have"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_state
+    attributes:
+      label: Current State
+      description: What's the current situation? What's wrong or suboptimal?
+      placeholder: |
+        - Current behavior/architecture
+        - What's the problem?
+        - Technical details
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Proposed Change
+      description: What do you want to change? How should it work?
+      placeholder: |
+        - Proposed solution
+        - New architecture/approach
+        - Technical details
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits
+      description: Why should we do this? What's the impact?
+      placeholder: |
+        - [ ] Faster build times
+        - [ ] Reduced complexity
+        - [ ] Better maintainability
+        - [ ] Lower costs
+        - [ ] Improved developer experience
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks & Considerations
+      description: What could go wrong? What should we be careful about?
+      placeholder: |
+        - Potential breaking changes
+        - Migration requirements
+        - Testing considerations
+    validations:
+      required: false
+
+  - type: textarea
+    id: effort
+    attributes:
+      label: Effort Estimate
+      description: How much work is this?
+      placeholder: |
+        - Estimated time: X hours/days
+        - Complexity: Low/Medium/High
+        - Team members needed: X
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: How do we know this is done?
+      placeholder: |
+        - [ ] Criteria 1
+        - [ ] Criteria 2
+        - [ ] All tests passing
+        - [ ] Documentation updated
+    validations:
+      required: true
