@@ -1,4 +1,4 @@
-[![DX Heroes. AI engineering. Better developer experience.](https://raw.githubusercontent.com/DXHeroes/.github/main/profile/cover.png)](https://www.dxheroes.io?utm_source=github&utm_medium=profile_readme&utm_campaign=org_profile)
+[![DX Heroes. AI engineering. Better developer experience.](https://raw.githubusercontent.com/DXHeroes/.github/main/profile/cover.png?v=1bdc8eb68efc)](https://www.dxheroes.io?utm_source=github&utm_medium=profile_readme&utm_campaign=org_profile)
 
 # DX Heroes
 
